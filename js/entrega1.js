@@ -36,28 +36,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const suscripto = document.getElementById("suscripto").value;
 
     if (nombre === "" || contieneNumero(nombre)) {
-      return mostrarMensaje("❌ El nombre no puede estar vacío ni contener números.");
+      return mostrarMensaje(" El nombre no puede estar vacío ni contener números.");
     }
     if (!validarCorreo(correo)) {
-      return mostrarMensaje("❌ Correo inválido.");
+      return mostrarMensaje(" Correo inválido.");
     }
     if (!validarEdad(edad)) {
-      return mostrarMensaje("❌ Edad inválida.");
+      return mostrarMensaje(" Edad inválida.");
     }
 
     if (suscripto === "si") {
       const usuarioExistente = usuarios.find(u => u.correo === correo);
       if (usuarioExistente) {
-        mostrarMensaje("👋 Bienvenido/a de nuevo. Tus datos:");
+        mostrarMensaje(">> Bienvenido/a de nuevo. Tus datos: <<");
         mostrarUsuario(usuarioExistente);
       } else {
-        mostrarMensaje("⚠️ Usuario no registrado aún.");
+        mostrarMensaje(" Usuario no registrado aún.");
       }
     } else {
       const user = document.getElementById("usuario").value.trim();
       const pass = document.getElementById("contraseña").value.trim();
       if (user === "" || pass === "") {
-        return mostrarMensaje("❌ Usuario y contraseña requeridos.");
+        return mostrarMensaje(" Usuario y contraseña requeridos.");
       }
 
       const nuevoUsuario = new Usuario(nombre, correo, edad, user, pass);
@@ -65,14 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        mostrarMensaje("⏳ Registrando usuario...");
+        mostrarMensaje(" Registrando usuario...");
         setTimeout(() => {
-          mostrarMensaje(`✅ ¡Usuario ${nuevoUsuario.usuario} creado con éxito!`);
+          mostrarMensaje(` ¡Usuario ${nuevoUsuario.usuario} creado con éxito!`);
           mostrarUsuario(nuevoUsuario);
         }, 1500);
       } catch (error) {
         console.error("Error al guardar en localStorage:", error);
-        mostrarMensaje("⚠️ No se pudo guardar el usuario.");
+        mostrarMensaje(" No se pudo guardar el usuario.");
       }
     }
   });
