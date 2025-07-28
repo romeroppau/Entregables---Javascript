@@ -1,0 +1,12 @@
+{
+  "name": "curso",
+  "version": "1.0.0",
+  "description": "Curso Javascript con node js",
+  "main": "entrega_final.js",
+  "scripts": {
+    "start": "node entrega_final.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ana Romero",
+  "license": "ISC"
+}

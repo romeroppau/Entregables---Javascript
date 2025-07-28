@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+/* Contenedor dinámico del contenido */
+#app {
+  background-color: #fff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Botón principal */
+#login, #btnIngresar, #btnRetirar {
+  background-color: #c8102e;
+  color: white;
+}
+
+#login:hover,
+#btnIngresar:hover,
+#btnRetirar:hover {
+  background-color: #a20d26;
+}
+
+/* Botón de cerrar sesión */
+#btnCerrarSesion {
+  background-color: #ccc;
+  color: #333;
+}
+
+#btnCerrarSesion:hover {
+  background-color: #bbb;
+}
+
+/* Botón de registro */
+#registro {
+  padding: 10px 20px;
+  border: 1.5px solid #c8102e;
+  background-color: #ffffff;
+  color: #c8102e;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#registro:hover {
+  background-color: #f9e6e6;
+}
+
+/* Lista de movimientos */
+ul#listaMovimientos {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul#listaMovimientos li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
